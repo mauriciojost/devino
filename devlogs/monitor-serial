@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e
+set -u
+
+curr_dir=$(readlink -e $(pwd))
+
+cd $curr_dir
+
+port=$1
+speed=${2:-115200}
+
+pio -f  device monitor --raw --port /dev/ttyUSB$port -b $speed
+

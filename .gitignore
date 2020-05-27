@@ -1,3 +1,10 @@
 devlogs/*.log
 devlogs/libs
-devlogs/mavarduino
+devlogs/.mavarduino
+devlogs/bump_version
+devlogs/format_code
+devlogs/launch_tests
+devlogs/pull_dependencies
+devlogs/serial_monitor
+devlogs/upload
+

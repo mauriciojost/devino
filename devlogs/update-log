@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -u
+set -x
+set -e
+
+#botino-arduino esp8266 1 dev2
+project=$1
+platform=$2
+usbid=$3
+devicename=$4
+
+cd /home/pi/persospace/$project
+git checkout master
+git pull origin master
+git submodule update --init --recursive
+./.mavarduino/create_links
+./pull_dependencies -p -l
+./upload -n $platform -p profiles/generic.prof -o /dev/ttyUSB$usbid -f 
+cd /home/pi/persospace/devino/devlogs 
+./monitor-serial $usbid &>> $devicename.log

@@ -6,6 +6,14 @@ A simple remote Raspberry based platform/procedures/whatever to control under-de
 - re-program them remotely if required
 - reset them remotely if required
 
+## Install
+
+```
+sudo apt-get install moreutils python-pip
+pip install -U platformio==3.5.3
+
+```
+
 ## Steps
 
 0. (optional) Install `Raspbian` in your `Raspberry PI Zero W` (or any Raspberry you like).

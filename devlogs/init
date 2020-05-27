@@ -5,7 +5,8 @@ set -x
 set -e
 
 git clone https://github.com/mauriciojost/mavarduino.git
-mavarduino/create_links
+mv mavarduino .mavarduino
+.mavarduino/create_links
 
 mkdir libs
 cd libs

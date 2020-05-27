@@ -10,7 +10,7 @@ A simple remote Raspberry based platform/procedures/whatever to control under-de
 
 ```
 sudo apt-get install moreutils python-pip
-pip install platformio==3.5.3
+sudo pip install platformio==3.5.3
 
 ```
 

@@ -18,4 +18,4 @@ git submodule update --init --recursive
 ./pull_dependencies -p -l
 ./upload -n $platform -p profiles/generic.prof -o /dev/ttyUSB$usbid -f 
 cd /home/pi/persospace/devino/devlogs 
-./monitor-serial $usbid &>> $devicename.log
+./serial_monitor $usbid &>> $devicename.log

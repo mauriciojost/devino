@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -u
+
+for i in $(seq 0 2)
+do
+  port=usbport$i
+  screen -S $port -dm bash -c "bash serial_monitor $i > $port.log"
+  echo "Reattach with: screens-attach $port"
+done
+
